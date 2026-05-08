@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Surface & Background Colors */
+  --color-background: #f6faff;
+  --color-surface: #f6faff;
+  --color-surface-dim: #d2dbe4;
+  --color-surface-bright: #f6faff;
+  --color-surface-variant: #dbe4ed;
+
+  /* Container Colors */
+  --color-surface-container: #e6eff8;
+  --color-surface-container-low: #ecf5fe;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #e0e9f2;
+  --color-surface-container-highest: #dbe4ed;
+
+  /* Primary Branding (Green) */
+  --color-primary: #006c4b;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #48bb8d;
+  --color-on-primary-container: #004630;
+  --color-primary-fixed: #87f8c6;
+  --color-primary-fixed-dim: #6adbab;
+
+  /* Secondary & Tertiary */
+  --color-secondary: #3d6659;
+  --color-secondary-container: #bfecdc;
+  --color-on-secondary-container: #436c5f;
+  --color-tertiary: #5c5f60;
+  --color-tertiary-container: #a6a8a9;
+
+  /* Typography & Content */
+  --color-on-surface: #141d23;
+  --color-on-surface-variant: #3d4943;
+  --color-on-background: #141d23;
+  --color-outline: #6d7a72;
+  --color-outline-variant: #bccac0;
+
+  /* Status Colors */
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+
+  /* Custom Fonts (As specified in your HTML) */
+  --font-geist: 'Geist', sans-serif;
+  --font-geist-mono: 'Geist Mono', monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-geist antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold tracking-tight;
+  }
+}

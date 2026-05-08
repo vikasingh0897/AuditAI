@@ -1,0 +1,43 @@
+# --- System Files ---
+.DS_Store
+Thumbs.db
+*.log
+
+# --- Dependencies ---
+# Recursively covers root, frontend, and backend folders
+node_modules/
+dist/
+build/
+.cache/
+
+# --- Environment Variables (CRITICAL)  ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# DO NOT ignore .env.example - it is required for documentation
+
+# --- TypeScript & IDEs ---
+.tscache/
+*.tsbuildinfo
+.vscode/
+.idea/
+*.swp
+
+# --- Frontend Specific ---
+frontend/dist/
+frontend/.next/
+frontend/out/
+
+# --- Backend Specific ---
+backend/dist/
+backend/*.db
+backend/*.sqlite
+
+# --- Testing ---
+coverage/
+.nyc_output/
+
+# --- Vercel/Deployment ---
+.vercel
