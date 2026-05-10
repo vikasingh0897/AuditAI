@@ -3,6 +3,7 @@
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    "isolatedModules": true,
     "rootDir": "./src",
     "outDir": "./dist",
     "esModuleInterop": true,
@@ -12,7 +13,7 @@
 
     /* Project Specifics */
     "lib": ["ESNext"],
-    "types": ["node"],
+    "types": ["node", "jest"],
     "sourceMap": true,
     "declaration": true,
     "verbatimModuleSyntax": true,
