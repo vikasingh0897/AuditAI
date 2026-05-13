@@ -113,6 +113,6 @@ export const sendAuditEmail = async ({
     return { success: true, data };
   } catch (err) {
     console.error('Unexpected Email Error:', err);
-    throw new Error('Failed to send audit email');
+    throw new Error('Failed to send audit email', { cause: err });
   }
 };
