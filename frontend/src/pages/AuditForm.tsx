@@ -176,6 +176,7 @@ const AuditForm: React.FC = () => {
                   </label>
                   <input
                     type="number"
+                    min={0}
                     className="w-full p-4 rounded-2xl border-2 border-slate-100 bg-slate-50 font-bold focus:border-primary focus:bg-white transition-all outline-none"
                     value={formData.teamSize}
                     onChange={(e) =>
@@ -245,6 +246,7 @@ const AuditForm: React.FC = () => {
                     <input
                       placeholder="Monthly $"
                       type="number"
+                      min={0}
                       className="p-4 bg-white border border-outline-variant rounded-2xl text-sm font-bold outline-none"
                       value={addingState.monthlySpend}
                       onChange={(e) =>
@@ -254,6 +256,7 @@ const AuditForm: React.FC = () => {
                     <input
                       placeholder="Seats"
                       type="number"
+                      min={1}
                       className="p-4 bg-white border border-outline-variant rounded-2xl text-sm font-bold outline-none text-center"
                       value={addingState.seats}
                       onChange={(e) =>
