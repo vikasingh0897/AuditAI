@@ -42,10 +42,10 @@ const AuditForm: React.FC = () => {
     return saved
       ? JSON.parse(saved)
       : {
-          tools: [] as AuditToolEntry[],
-          teamSize: 1,
-          useCase: 'Coding',
-        };
+        tools: [] as AuditToolEntry[],
+        teamSize: 1,
+        useCase: 'Coding',
+      };
   });
 
   const [selectedTool, setSelectedTool] = useState<Tool | null>(null);
@@ -250,7 +250,10 @@ const AuditForm: React.FC = () => {
                       className="p-4 bg-white border border-outline-variant rounded-2xl text-sm font-bold outline-none"
                       value={addingState.monthlySpend}
                       onChange={(e) =>
-                        setAddingState({ ...addingState, monthlySpend: e.target.value })
+                        setAddingState({
+                          ...addingState,
+                          monthlySpend: Math.max(0, parseFloat(e.target.value) || 0).toString(),
+                        })
                       }
                     />
                     <input
@@ -260,7 +263,10 @@ const AuditForm: React.FC = () => {
                       className="p-4 bg-white border border-outline-variant rounded-2xl text-sm font-bold outline-none text-center"
                       value={addingState.seats}
                       onChange={(e) =>
-                        setAddingState({ ...addingState, seats: parseInt(e.target.value) || 0 })
+                        setAddingState({
+                          ...addingState,
+                          seats: Math.max(1, parseInt(e.target.value) || 1),
+                        })
                       }
                     />
                   </div>
